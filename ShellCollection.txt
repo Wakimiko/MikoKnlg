@@ -3,5 +3,6 @@
 
 sudo chown -R $USER /usr/local
 #change owner of the folder and its subfolder and files;
+#used in brew install when /usr/local/* is not writtable
 
 
