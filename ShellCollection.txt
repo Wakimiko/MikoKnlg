@@ -11,4 +11,7 @@ sudo chown -R $USER /usr/local
 #write user [ttys001/tty_name]
 #communicate with others logged in in a PC (using ssh?)
 
+#https://www.cnblogs.com/zzdyyy/p/7538077.html
+#pts pseudo terminal introduction
+
 
