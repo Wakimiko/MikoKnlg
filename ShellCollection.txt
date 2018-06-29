@@ -8,3 +8,7 @@ sudo chown -R $USER /usr/local
 #https://blog.csdn.net/qq_31810357/article/details/49367247
 #Common useful command
 
+#write user [ttys001/tty_name]
+#communicate with others logged in in a PC (using ssh?)
+
+
