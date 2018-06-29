@@ -1,0 +1,12 @@
+##Another bash tricks
+
+#Binding shortcut key by entering bind in bash. refer man bind
+#Meta key is bound to Esc on Mac shell
+#Most can be found on man bash
+https://linux.die.net/man/1/bash
+http://www.faqs.org/docs/bashman/bashref_94.html#SEC101
+http://www.faqs.org/docs/bashman/bashref_95.html#SEC102
+http://www.faqs.org/docs/bashman/bashref_96.html#SEC103
+http://www.faqs.org/docs/bashman/bashref_97.html#SEC104
+#### Meta-f/b word forword back
+####
