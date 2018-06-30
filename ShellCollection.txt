@@ -1,3 +1,4 @@
+
 #
 #A collection of shell command
 
@@ -11,6 +12,9 @@ sudo chown -R $USER /usr/local
 #write user [ttys001/tty_name]
 #communicate with others logged in in a PC (using ssh?)
 
+#w / tty
+#Show users logged in
+
 #https://www.cnblogs.com/zzdyyy/p/7538077.html
 #pts pseudo terminal introduction
 
@@ -21,3 +25,10 @@ sudo chown -R $USER /usr/local
 
 #(In vim):echo $VIMRUNTIME
 #In vim//show stuff of vim/where it is
+
+#~/.bash_profile
+#An important script?
+
+#export PATH=$PATH:/path/to/my/stuff
+#Create a new PATH, keeping the system default PATH
+
