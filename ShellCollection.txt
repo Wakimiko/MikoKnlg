@@ -1,8 +1,8 @@
-
 #
 #A collection of shell command
 
 sudo chown -R $USER /usr/local
+#???chmod
 #change owner of the folder and its subfolder and files;
 #used in brew install when /usr/local/* is not writtable
 
@@ -31,4 +31,24 @@ sudo chown -R $USER /usr/local
 
 #export PATH=$PATH:/path/to/my/stuff
 #Create a new PATH, keeping the system default PATH
+
+#launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+#launchctl unload /System/Library/LaunchDaemons/ssh.plist
+#enable/disable ssh service
+
+#https://blog.csdn.net/dream0130__/article/details/79016772
+
+
+#host xxx
+#set host name for ssh?
+
+#netstat -anl | grep LISTEN | grep "*.22"
+#view netstate (ssh is open)
+#cmd blw cnt show a daemon of ssh
+#sudo launchctl list
+
+####???What is the difference between sshd and ssh???
+###man sshd_config
+
+
 
