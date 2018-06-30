@@ -14,4 +14,10 @@ sudo chown -R $USER /usr/local
 #https://www.cnblogs.com/zzdyyy/p/7538077.html
 #pts pseudo terminal introduction
 
+#ln -s sourceDirectory newIn$PATH
+#create link to the executable apps?
+#https://stackoverflow.com/questions/1951742/how-to-symlink-a-file-in-linux
+#$PATH show environment variable path?
 
+#(In vim):echo $VIMRUNTIME
+#In vim//show stuff of vim/where it is
