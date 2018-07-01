@@ -50,5 +50,20 @@ sudo chown -R $USER /usr/local
 ####???What is the difference between sshd and ssh???
 ###man sshd_config
 
+##ffmpeg udp rtp rtsp nginxServer may be required?
+#live stream /iSight supported?
+###ffmpeg -f avfoundation -list_devices true -i ""
+https://stackoverflow.com/questions/18966994/record-a-video-with-isight-using-ffmpeg
+http://www.cuplayer.com/player/PlayerCode/FFmpeg/2015/0410/1875.html
+https://blog.csdn.net/leixiaohua1020/article/details/38283297
+https://stackoverflow.com/questions/27930879/what-is-ffmpegs-udp-protocol
+https://blog.csdn.net/5hongbing/article/details/73476937
+https://blog.csdn.net/leixiaohua1020/article/details/38283297
+https://www.jianshu.com/p/8c5dc672b6f4
+https://www.jianshu.com/p/cd6d6e833c72
+https://blog.csdn.net/chuicao4350/article/details/51554155
+https://blog.csdn.net/xxdw1992/article/details/78629651
+https://blog.csdn.net/chenmeng2015/article/details/78123714
+
 
 
