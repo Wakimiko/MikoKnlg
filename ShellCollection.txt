@@ -65,5 +65,8 @@ https://blog.csdn.net/chuicao4350/article/details/51554155
 https://blog.csdn.net/xxdw1992/article/details/78629651
 https://blog.csdn.net/chenmeng2015/article/details/78123714
 
-
-
+#git credential-osxkeychain delete access 
+https://apple.stackexchange.com/questions/324162/github-and-credential-osxkeychain-delete-access
+https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
+https://tech.lds.org/wiki/Git_Credential_Caching_on_Mac_OS_X
+https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
