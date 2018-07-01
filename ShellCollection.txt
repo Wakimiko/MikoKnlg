@@ -12,6 +12,10 @@ sudo chown -R $USER /usr/local
 #write user [ttys001/tty_name]
 #communicate with others logged in in a PC (using ssh?)
 
+#ssh and sshd
+#https://blog.csdn.net/dream0130__/article/details/79016772
+#http://blog.51cto.com/13355576/1973917
+
 #w / tty
 #Show users logged in
 
@@ -70,3 +74,19 @@ https://apple.stackexchange.com/questions/324162/github-and-credential-osxkeycha
 https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
 https://tech.lds.org/wiki/Git_Credential_Caching_on_Mac_OS_X
 https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
+https://www.cnblogs.com/volnet/p/git-credentials.html
+https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
+
+#git global config
+#https://stackoverflow.com/questions/12254076/how-do-i-show-my-global-git-config
+
+#ssh key authentication
+##https://superuser.com/questions/283216/ssh-key-authentication-with-another-user
+##https://stackoverflow.com/questions/43948879/the-ssh-key-configuration-for-non-root-users-in-centos
+##https://security.stackexchange.com/questions/127307/how-to-configure-ssh-public-key-per-user
+##https://stackoverflow.com/questions/7260/how-do-i-setup-public-key-authentication
+##https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
+
+#system file permissions
+#https://unix.stackexchange.com/questions/1314/how-to-set-default-file-permissions-for-all-folders-files-in-a-directory
+
