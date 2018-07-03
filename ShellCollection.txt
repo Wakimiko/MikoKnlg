@@ -90,3 +90,11 @@ https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
 #system file permissions
 #https://unix.stackexchange.com/questions/1314/how-to-set-default-file-permissions-for-all-folders-files-in-a-directory
 
+#diskutil list
+#df -hl
+#view disk storage and else
+
+#--clang-completer?
+#macvim YCM installation
+
+
