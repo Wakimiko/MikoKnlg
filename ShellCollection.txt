@@ -16,7 +16,7 @@ sudo chown -R $USER /usr/local
 #https://blog.csdn.net/dream0130__/article/details/79016772
 #http://blog.51cto.com/13355576/1973917
 
-#w / tty
+#w / tty / who 
 #Show users logged in
 
 #https://www.cnblogs.com/zzdyyy/p/7538077.html
