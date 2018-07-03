@@ -97,4 +97,10 @@ https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
 #--clang-completer?
 #macvim YCM installation
 
+#ps aux | grep
+#see the PID of process
+
+#sudo kill -9 PID
+#kill a process
+
 
