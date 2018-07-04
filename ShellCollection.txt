@@ -106,10 +106,11 @@ https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
 #qt5 installation
 #pure-ftpd
 #launchctl ftp
+#brew services pure-ftpd
 #useradd usermod -U(use password, enable user after created)
 #-r system account?
 #-G ...,...,sudo //Administrator
-#sudo paswd user ...
+#sudo passwd user ...
 #su (input pswd)
 #userdel groupadd groupdel
 #ftp/sftp:user@ip   sftp>...exit...get...put...lls...lpwd...
@@ -131,3 +132,34 @@ https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
 #https://serverfault.com/questions/194832/how-to-start-stop-restart-launchd-services-from-the-command-line
 #http://man.linuxde.net/systemctl
 #Just keep in mind that some of the services (sshd for example) are disabled in the configuration file so you will need to use the -w switch when loading them
+
+#ffmpeg -r 30 -f avfoundation -i 0 udp://239.255.12.42:6970
+#ffmpeg -f avfoundation -i ""
+#ffmpeg -f avfoundation -list_devices true -i ""
+
+#ffmpeg -re -threads 4 -f alsa -ac 1 -ar 22050 -i hw:2,0 -f v4l2 -vcodec mjpeg -s 1280x720 -r 25 -i /dev/video0 -s 1280x720 -ar 11025 -ac 1 -b:a 32000 -f flv -vcodec libx264 -bufsize 512000 -maxrate 512000 -r 25 <your publish url>
+#ffmpeg -re -threads 4 -i ~/Dropbox/MetalBALLZ/Helm\ \(2013\)\ III/06\ -\ Drag\ the\ anchor.mp3 -f flv -ar 44100 -ac 2 -c:a libfaac -b:a 256k <your publish url>
+
+
+######!!!!Two -f!!!! first specify the input avfoundation, second the output stream!!!!
+ffmpeg -pix_fmt yuv420p -r 30 -f avfoundation -i "0" -codec:v h264 -f h264 udp://233.233.233.233:23333
+#ffmpeg -pix_fmt yuyv422 -r 30 -f avfoundation -i "FaceTime HD Camera:Built-in Microphone" -codec:v h264 -codec:a mp3 -f ts udp://233.233.233.233:23333
+#https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
+#ffmpeg -formats to see what -f options can be used.
+##!!FINAL!!###Mikomiko:FFmpegRTSPServer McBk_Liu$ ffmpeg -pix_fmt yuyv422 -r 30 -f avfoundation -i "FaceTime HD Camera:Built-in Microphone" -codec:v h264 -codec:a mp3 -f mpegts udp://233.233.233.233:23333
+#UDP loss rate is high, only used in LAN with STRONG WIFI SIGNAL,
+#consider rtp to remote view, plz.
+
+#https://superuser.com/questions/1125344/streaming-in-ffmpeg-using-rtp
+#https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
+#https://blog.csdn.net/weiyuefei/article/details/51678582
+#https://www.zhihu.com/question/22854380
+#https://en.wikipedia.org/wiki/Audio_Video_Interleave
+#https://superuser.com/questions/851977/ffmpeg-merging-mp3-mp4-no-sound-with-copy-codec
+#https://baike.baidu.com/item/%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81
+#https://baike.baidu.com/item/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F
+#https://baike.baidu.com/item/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81
+#https://support.metacdn.com/hc/en-us/articles/204513935-How-to-Live-Stream-Using-FFmpeg
+#https://apple.stackexchange.com/questions/326575/ffmpeg-arguments-for-optimizing-video-stream
+#https://stackoverflow.com/questions/18966994/record-a-video-with-isight-using-ffmpeg?noredirect=1
+
