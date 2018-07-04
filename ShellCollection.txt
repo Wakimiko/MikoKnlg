@@ -103,4 +103,31 @@ https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
 #sudo kill -9 PID
 #kill a process
 
+#qt5 installation
+#pure-ftpd
+#launchctl ftp
+#useradd usermod -U(use password, enable user after created)
+#-r system account?
+#-G ...,...,sudo //Administrator
+#sudo paswd user ...
+#su (input pswd)
+#userdel groupadd groupdel
+#ftp/sftp:user@ip   sftp>...exit...get...put...lls...lpwd...
 
+#vim Vundle
+#vim YCM
+
+#/etc/services store ports and services running on it
+
+#nfs services using systemctl to start
+
+#Mac dscl edit user
+#after changing, use sudo reboot
+
+#launchctl systemctl
+#plist
+#Scheduled tasks!
+#.../Library/Launchxxx/xxx.plist
+#https://serverfault.com/questions/194832/how-to-start-stop-restart-launchd-services-from-the-command-line
+#http://man.linuxde.net/systemctl
+#Just keep in mind that some of the services (sshd for example) are disabled in the configuration file so you will need to use the -w switch when loading them
