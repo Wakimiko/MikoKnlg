@@ -163,3 +163,11 @@ ffmpeg -pix_fmt yuv420p -r 30 -f avfoundation -i "0" -codec:v h264 -f h264 udp:/
 #https://apple.stackexchange.com/questions/326575/ffmpeg-arguments-for-optimizing-video-stream
 #https://stackoverflow.com/questions/18966994/record-a-video-with-isight-using-ffmpeg?noredirect=1
 
+
+
+#vim setting for correct YCM INDENT!!!
+##!!The Key is to Refer to the Code in Github YCM repo!!##
+###set tabstop=4 //not neccesary
+#set shiftwidth=4
+#set softtabstop=4
+#set expandtab
