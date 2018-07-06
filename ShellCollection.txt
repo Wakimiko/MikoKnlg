@@ -141,7 +141,10 @@ https://stackoverflow.com/questions/16052602/disable-git-credential-osxkeychain
 #ffmpeg -re -threads 4 -i ~/Dropbox/MetalBALLZ/Helm\ \(2013\)\ III/06\ -\ Drag\ the\ anchor.mp3 -f flv -ar 44100 -ac 2 -c:a libfaac -b:a 256k <your publish url>
 
 
+
 ######!!!!Two -f!!!! first specify the input avfoundation, second the output stream!!!!
+ffmpeg -s xxx*xxx -pix_fmt xxx -r 30 -f avfoundation -i 0 -frames:v x emm%[n]d.jpeg #Take picture
+ffmpeg  -s 1280*720 -pix_fmt yuyv422 -r 10 -f avfoundation -i 0 -frames:v 10 ~/Desktop/TempTest/emm%1d.apng //Detailed
 ffmpeg -pix_fmt yuv420p -r 30 -f avfoundation -i "0" -codec:v h264 -f h264 udp://233.233.233.233:23333
 #ffmpeg -pix_fmt yuyv422 -r 30 -f avfoundation -i "FaceTime HD Camera:Built-in Microphone" -codec:v h264 -codec:a mp3 -f ts udp://233.233.233.233:23333
 #https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg
@@ -171,3 +174,27 @@ ffmpeg -pix_fmt yuv420p -r 30 -f avfoundation -i "0" -codec:v h264 -f h264 udp:/
 #set shiftwidth=4
 #set softtabstop=4
 #set expandtab
+#vim ctrl G view cursor position in file
+#vim tab and windows
+#:buffers to see windows
+#-p for multiple tabs, -o\O for windows
+####:[position]tabe(dit)[tabName] edit new tab or existed file
+####:[position]tabnew, :tabc(lose)
+####gt,gT,tabn,tabp switch to tab
+####tabe(dit), tabf(ind), tabnew
+####q key(register,no =+*...) record, [times]@key(no =+*) execute
+####Visual, V, ctrl v\V\q\Q, o to swap cursor
+####ctrl w, w to switch window, q to quit window, s to split in two, v to spit vertical
+####b to bottom-right, t to topleft, Nth w to nth window, s/vs to split
+####r to move windows while cursor stays,R(up\left),
+####=+-<>to resize by\ [number]_(hori)|(vert)  to resize to,
+####:[height]sp[lit] to split in two,[width]vs[plit]
+####:on to close all windows but the current one
+####:on,:only,CTRL-w CTRL-o,CTRL-W o
+####:set ea(equalalways) to split equally
+####:[hei,wid]new,vne[ew] filename
+####:[N]sv[iew] read only
+####to change argument, use :set xxx=xxx
+
+
+####Valgrind----A tool detecting memory leaks of C++ program
