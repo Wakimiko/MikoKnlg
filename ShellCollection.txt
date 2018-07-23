@@ -198,3 +198,19 @@ ffmpeg -pix_fmt yuv420p -r 30 -f avfoundation -i "0" -codec:v h264 -f h264 udp:/
 
 
 ####Valgrind----A tool detecting memory leaks of C++ program
+
+
+
+
+
+
+
+
+
+#linux.vbird.org
+#VBird Linux Learning Site
+/usr/share/doc
+/usr/share/info
+--help,man,apropos(man -k),whatis(man -f),info
+sudo mandb(makewhatis) to make library
+
