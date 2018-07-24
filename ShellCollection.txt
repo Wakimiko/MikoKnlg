@@ -214,6 +214,10 @@ ffmpeg -pix_fmt yuv420p -r 30 -f avfoundation -i "0" -codec:v h264 -f h264 udp:/
 --help,man,apropos(man -k),whatis(man -f),info
 sudo mandb(makewhatis) to make library
 
+poweroff,halt,reboot,shutdown,systemctl
+shutdown -r time(+min;HH:MM) Broadcast but not shutdown
+init nu(compatible with old version)
 sync
 write everything in memory to disk
-
+ps -aux;netstat -a;who;
+before poweroff, see the state of system
