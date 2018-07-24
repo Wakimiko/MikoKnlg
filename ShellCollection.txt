@@ -209,9 +209,14 @@ ffmpeg -pix_fmt yuv420p -r 30 -f avfoundation -i "0" -codec:v h264 -f h264 udp:/
 
 #linux.vbird.org
 #VBird Linux Learning Site
+
+OSX, Fn UP/DOWN = page up/down
+cmd | less/more
+
 /usr/share/doc
 /usr/share/info
 --help,man,apropos(man -k),whatis(man -f),info
+man -f man to see the meaning of numbers(1)(5)(8)(IMPRT)
 sudo mandb(makewhatis) to make library
 
 poweroff,halt,reboot,shutdown,systemctl
@@ -221,3 +226,13 @@ sync
 write everything in memory to disk
 ps -aux;netstat -a;who;
 before poweroff, see the state of system
+
+uname -all show system OS info
+/etc/issue Prompt when startup, see also agetty
+
+6 tty by default, use ctrl-Alt-f1_6
+Ctrl-Alt-Backspace restart X window(gname/KDE/...)
+
+tab can also be used for parameter completion --help --he[tab]
+
+export LANG=en_US.utf8, export LC_ALL=en_US.utf8
