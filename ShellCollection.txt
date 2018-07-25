@@ -256,6 +256,96 @@ c=char(onetime read,keyboard,mouse,...);s=sockets,usly on net
 既然被稱為資料接口檔， 想當然爾，這種類型的檔案通常被用在網路上的資料承接了。我們可以啟動一個程式來監聽用戶端的要求， 而用戶端就可以透過這個socket來進行資料的溝通了。第一個屬性為 [ s ]， 最常在/run或/tmp這些個目錄中看到這種檔案類型了。
 資料輸送檔(FIFO, pipe)：
 FIFO也是一種特殊的檔案類型，他主要的目的在解決多個程序同時存取一個檔案所造成的錯誤問題。 FIFO是first-in-first-out的縮寫。第一個屬性為[p] 
+~[user]:home dir of user(including root)
+pwd -P show the full dir but not dir with link
+mkdir -p /xx/xx/xx/... -m rwxrwxrwx
+rmdir [-p,rm empty dirs in input recursively]
+rm -r [-f]:rm dirs that may be not empty, different from rmdir -p though empty
+BASH: $(VARIABLE),e.g. $PATH
+ls useful reference
+[root@study ~]# ls [-aAdfFhilnrRSt] 檔名或目錄名稱..
+[root@study ~]# ls [--color={never,auto,always}] 檔名或目錄名稱..
+[root@study ~]# ls [--full-time] 檔名或目錄名稱..
+-a  ：全部的檔案，連同隱藏檔( 開頭為 . 的檔案) 一起列出來(常用)
+-A  ：全部的檔案，連同隱藏檔，但不包括 . 與 .. 這兩個目錄
+-d  ：僅列出目錄本身，而不是列出目錄內的檔案資料(常用)
+-f  ：直接列出結果，而不進行排序 (ls 預設會以檔名排序！)
+-F  ：根據檔案、目錄等資訊，給予附加資料結構，例如：
+      *:代表可執行檔； /:代表目錄； =:代表 socket 檔案； |:代表 FIFO 檔案；
+-h  ：將檔案容量以人類較易讀的方式(例如 GB, KB 等等)列出來；
+-i  ：列出 inode 號碼，inode 的意義下一章將會介紹；
+-l  ：長資料串列出，包含檔案的屬性與權限等等資料；(常用)
+-n  ：列出 UID 與 GID 而非使用者與群組的名稱 (UID與GID會在帳號管理提到！)
+-r  ：將排序結果反向輸出，例如：原本檔名由小到大，反向則為由大到小；
+-R  ：連同子目錄內容一起列出來，等於該目錄下的所有檔案都會顯示出來；
+-S  ：以檔案容量大小排序，而不是用檔名排序；
+-t  ：依時間排序，而不是用檔名。
+--color=never  ：不要依據檔案特性給予顏色顯示；
+--color=always ：顯示顏色
+--color=auto   ：讓系統自行依據設定來判斷是否給予顏色
+--full-time    ：以完整時間模式 (包含年、月、日、時、分) 輸出
+--time={atime,ctime} ：輸出 access 時間或改變權限屬性時間 (ctime) 
+                       而非內容變更時間 (modification time)
+[root@study ~]# cp [-adfilprsu] 來源檔(source) 目標檔(destination)
+[root@study ~]# cp [options] source1 source2 source3 .... directory
+選項與參數：
+-a  ：相當於 -dr --preserve=all 的意思，至於 dr 請參考下列說明；(常用)
+-d  ：若來源檔為連結檔的屬性(link file)，則複製連結檔屬性而非檔案本身；
+-f  ：為強制(force)的意思，若目標檔案已經存在且無法開啟，則移除後再嘗試一次；
+-i  ：若目標檔(destination)已經存在時，在覆蓋時會先詢問動作的進行(常用)
+-l  ：進行硬式連結(hard link)的連結檔建立，而非複製檔案本身；
+-p  ：連同檔案的屬性(權限、用戶、時間)一起複製過去，而非使用預設屬性(備份常用)；
+-r  ：遞迴持續複製，用於目錄的複製行為；(常用)
+-s  ：複製成為符號連結檔 (symbolic link)，亦即『捷徑』檔案；
+-u  ：destination 比 source 舊才更新 destination，或 destination 不存在的情況下才複製。
+--preserve=all ：除了 -p 的權限相關參數外，還加入 SELinux 的屬性, links, xattr 等也複製了。
+最後需要注意的，如果來源檔有兩個以上，則最後一個目的檔一定要是『目錄』才行！
+
+ll==ls -l
+\cmd: ignore options specified in alias cmd(ll,sudo rm,...)
+/usr/local/emm basename:emm, dirname: /usr/local
+
+cat  由第一行開始顯示檔案內容
+-A  ：相當於 -vET 的整合選項，可列出一些特殊字符而不是空白而已；
+-b  ：列出行號，僅針對非空白行做行號顯示，空白行不標行號！
+-E  ：將結尾的斷行字元 $ 顯示出來；
+-n  ：列印出行號，連同空白行也會有行號，與 -b 的選項不同；
+-T  ：將 [tab] 按鍵以 ^I 顯示出來；
+-v  ：列出一些看不出來的特殊字符
+
+tac  從最後一行開始顯示，可以看出 tac 是 cat 的倒著寫！
+nl   顯示的時候，順道輸出行號！
+-b  ：指定行號指定的方式，主要有兩種：
+      -b a ：表示不論是否為空行，也同樣列出行號(類似 cat -n)；
+      -b t ：如果有空行，空的那一行不要列出行號(預設值)；
+-n  ：列出行號表示的方法，主要有三種：
+      -n ln ：行號在螢幕的最左方顯示；
+      -n rn ：行號在自己欄位的最右方顯示，且不加 0 ；
+      -n rz ：行號在自己欄位的最右方顯示，且加 0 ；
+-w  ：行號欄位的佔用的字元數。
+
+more 一頁一頁的顯示檔案內容
+less 與 more 類似，但是比 more 更好的是，他可以往前翻頁！
+head [-n number] 只看頭幾行
+tail [-n number] 只看尾巴幾行
+od   以二進位的方式讀取檔案內容！
+echo "password" | od -ac -t x1 #ASCII reference of "password"
+date -s/--set="time String" only to change system time
+to change everything of time, add:
+hwclock -w/systohc
+or abandon date, but use:
+timedatectl
+#show mtime(modified), atime(access), ctime(status) difference
+timedatectl;ll --full-time | grep Doc;ll --full-time --time=atime | grep Doc;ll --full-time  --time=ctime | grep Doc;
+
+[root@study ~]# touch [-acdmt] 檔案
+選項與參數：
+-a  ：僅修訂 access time；
+-c  ：僅修改檔案的時間，若該檔案不存在則不建立新檔案；
+-d  ：後面可以接欲修訂的日期而不用目前的日期，也可以使用 --date="日期或時間"
+-m  ：僅修改 mtime ；
+-t  ：後面可以接欲修訂的時間而不用目前的時間，格式為[YYYYMMDDhhmm]
+
 #VIM substitution,:[range]s/from/to/[flags]
 range:%=all,num[,num]s=range;1,$s???;
 flag:c=confirm bf chg;e=noDisplayErr;g=globalLine;i=ignore
