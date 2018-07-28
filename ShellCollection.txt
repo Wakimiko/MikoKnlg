@@ -347,6 +347,9 @@ timedatectl;ll --full-time | grep Doc;ll --full-time --time=atime | grep Doc;ll 
 -m  ：僅修改 mtime ；
 -t  ：後面可以接欲修訂的時間而不用目前的時間，格式為[YYYYMMDDhhmm]
 
+tar: -t list entries, -c compress, -x decompress, -j bzip, -z gzip, -f read/write file
+e.g. tar -cjf newfile.tar.bz anything
+zip: -e specify password after prompt, -P "password"
 #VIM substitution,:[range]s/from/to/[flags]
 range:%=all,num[,num]s=range;1,$s???;
 flag:c=confirm bf chg;e=noDisplayErr;g=globalLine;i=ignore
