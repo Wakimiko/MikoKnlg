@@ -30,6 +30,7 @@ sudo chown -R $USER /usr/local
 #(In vim):echo $VIMRUNTIME
 #In vim//show stuff of vim/where it is
 
+
 #~/.bash_profile
 #An important script?
 
@@ -349,4 +350,4 @@ timedatectl;ll --full-time | grep Doc;ll --full-time --time=atime | grep Doc;ll 
 #VIM substitution,:[range]s/from/to/[flags]
 range:%=all,num[,num]s=range;1,$s???;
 flag:c=confirm bf chg;e=noDisplayErr;g=globalLine;i=ignore
-
+ctrl-G: show cursor position in the whole file
