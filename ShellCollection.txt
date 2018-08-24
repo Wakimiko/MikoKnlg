@@ -29,6 +29,7 @@ sudo chown -R $USER /usr/local
 
 #(In vim):echo $VIMRUNTIME
 #In vim//show stuff of vim/where it is
+vi file -c "e ++enc=gb18030"//ANSI encoding
 
 
 #~/.bash_profile
