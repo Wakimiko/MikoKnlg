@@ -358,4 +358,6 @@ ctrl-G: show cursor position in the whole file
 
 apt rdepend to view dependencies
 curl ip.gs/ip.sb to view current IP
-
+env to get environment set before running a program
+screen to split terminal
+googler --a bash based searching program, raise error: blocked,,, (while error_page in xxx)emm
