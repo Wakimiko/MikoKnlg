@@ -355,3 +355,7 @@ zip: -e specify password after prompt, -P "password"
 range:%=all,num[,num]s=range;1,$s???;
 flag:c=confirm bf chg;e=noDisplayErr;g=globalLine;i=ignore
 ctrl-G: show cursor position in the whole file
+
+apt rdepend to view dependencies
+curl ip.gs/ip.sb to view current IP
+
